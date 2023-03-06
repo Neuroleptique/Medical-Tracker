@@ -9,11 +9,11 @@ The Medical Tracker application has the following features:
 * Dashboard to view upcoming appointments and medications.
 * Ability to contact medical professionals
 * Ability to locate Pharmacy / Medical centres for appointments.
-* Ability to add, edit, and delete appointments
-* Ability to add, edit, and delete medications
-* Medical history tracking
-* User profile management
-* Secure authentication .
+* Ability to add, edit, and delete appointments.
+* Ability to add, edit, and delete medications.
+* Medical history tracking.
+* User profile management.
+* Secure authentication.
 
 **Link to project:** work in progess
 
