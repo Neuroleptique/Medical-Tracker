@@ -38,24 +38,9 @@ app.use(
   })
 );
 
-
 // Passport middleware
 app.use(passport.initialize());
-// Fix passport v0.6 regenerate not a function error
-const regenerate = callback => {
-	console.log('regenerating')
-	callback()
-}
-const save = callback => {
-	console.log('saving')
-	callback()
-}
-app.use((req, res, next)=>{
-	req.session.regenerate = regenerate
-	req.session.save = save
-	next()
-})
-app.use(passport.session())
+app.use(passport.session());
 
 app.use(flash());
 
