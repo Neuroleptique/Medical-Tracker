@@ -49,7 +49,7 @@ To get started, follow these steps:
 * The application will now be accessible at http://localhost:3000
   
 ## Lessons Learned:
-Mongoose Schema
+Mongoose Schema, React
 
 ## License
 The Medical Tracker application is open source and licensed under the MIT License.
