@@ -116,7 +116,12 @@ exports.postSignup = async (req, res, next) => {
       });
 
       await user.save();
-      res.redirect('/dashboard')
+      req.logIn(user, (err) => {
+        if (err) {
+          return next(err);
+        }
+        res.redirect("/dashboard");
+      });
     }
 
   } catch(err) {
