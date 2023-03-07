@@ -7,9 +7,12 @@
         <% messages.errors.forEach( el => { %>
           <div><%= el.msg %></div>
         <% }) %>
-      <% } %>
-      <% if (locals.messages.info) { %>
+      <% } else if (locals.messages.info) { %>
         <% messages.info.forEach( el => { %>
+          <div><%= el.msg %></div>
+        <% }) %>
+      <% } else if (locals.messages.success) { %>
+        <% messages.success.forEach( el => { %>
           <div><%= el.msg %></div>
         <% }) %>
       <% } %>
