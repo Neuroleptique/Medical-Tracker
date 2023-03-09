@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
@@ -7,19 +8,19 @@ const MongoStore = require("connect-mongo");
 const flash = require("express-flash");
 const logger = require("morgan");
 const connectDB = require("./config/database");
-const mainRoutes = require('./routes/main');
+const mainRoutes = require("./routes/main");
 
 // Use .env file in config folder
-require("dotenv").config({ path: "./config/config.env" });
+require("dotenv").config({ path: "./config/.env" });
 
 // Passport config
 require("./config/passport")(passport);
 
-// Using EJS for views
-app.set("view engine", "ejs");
-
 // Static Folder
 app.use(express.static("public"));
+
+//CORS policy
+app.use(cors());
 
 // Body Parsing
 app.use(express.urlencoded({ extended: true }));
@@ -45,14 +46,19 @@ app.use(passport.session());
 app.use(flash());
 
 // Views in public folder
-app.use(express.static('/public'));
+app.use(express.static("/public"));
+
+//Home route
+app.get("/", (_req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
 // Router directories
-app.use('/', mainRoutes);
+app.use("/", mainRoutes);
 
 // Connect To Database
 connectDB().then(() => {
   app.listen(process.env.PORT, () => {
     console.log("Server is running, you better catch it!");
-  })
-})
+  });
+});
