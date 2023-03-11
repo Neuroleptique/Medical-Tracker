@@ -4,7 +4,15 @@
   "main": "server.js",
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "A full-stack web application built using the MERN stack (MongoDB, Express.js, React, and Node.js) designed to help users monitor their health and medical conditions.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neuroleptique/Medical-Tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Neuroleptique/Medical-Tracker/issues"
+  },
+  "homepage": "https://github.com/Neuroleptique/Medical-Tracker#readme",
   "scripts": {
     "start": "nodemon server.js"
   },
@@ -24,13 +32,5 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AirSayy/Medical-Tracker.git"
-  },
-  "bugs": {
-    "url": "https://github.com/AirSayy/Medical-Tracker/issues"
-  },
-  "homepage": "https://github.com/AirSayy/Medical-Tracker#readme"
+  }
 }
