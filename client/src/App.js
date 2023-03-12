@@ -1,8 +1,9 @@
 import React from 'react'
+import Login from './Login'
 
 function App() {
   return (
-    <button class="btn btn-primary">Button</button>
+   <Login></Login>
   )
 }
 
