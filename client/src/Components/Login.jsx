@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+
 
 function Login(props) {
   return (
@@ -38,10 +40,10 @@ function Login(props) {
     </form>
     <span>
       <p>
-        {props.memberText}{" "}
-        <a href="#" className="link-info">
+        {props.memberText}
+        <Link to={props.link} className="link-info">
          {props.linkText}
-        </a>
+        </Link>
       </p>
     </span>
   </div>
