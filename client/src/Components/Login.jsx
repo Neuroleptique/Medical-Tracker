@@ -13,7 +13,7 @@ function Login(props) {
         <p className="text-align text-center">Sign in to continue</p>
       </span>
     </div>
-    <form action="/">
+    <form action="/login" method='POST'>
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text text-base ">Name</span>
@@ -22,6 +22,7 @@ function Login(props) {
           type="text"
           placeholder="Type here"
           className="input input-bordered w-full max-w-xs"
+          name='email'
         />
         <div className="form-control w-full max-w-xs">
           <label className="label">
@@ -31,6 +32,7 @@ function Login(props) {
             type="Password"
             placeholder="Enter Your Password"
             className="input input-bordered w-full max-w-xs"
+            name='password'
           />
         </div>
         <button className="btn btn-primary text-white mt-4 text-xl">
