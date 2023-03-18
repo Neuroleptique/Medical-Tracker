@@ -1,0 +1,39 @@
+{
+  "name": "medicaltracker",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "description": "A full-stack web application built using the MERN stack (MongoDB, Express.js, React, and Node.js) designed to help users monitor their health and medical conditions.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neuroleptique/Medical-Tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Neuroleptique/Medical-Tracker/issues"
+  },
+  "homepage": "https://github.com/Neuroleptique/Medical-Tracker#readme",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-mongo": "^4.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.0.0",
+    "morgan": "^1.10.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "validator": "^13.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
