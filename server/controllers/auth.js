@@ -35,15 +35,15 @@ exports.postLogin = (req, res, next) => {
     }
     if (!user) {
       req.flash("errors", info)
-      return res.redirect("/login")
+      return res.status(200).json({ msg: "User can login" })
     }
-    // req.logIn(user, (err) => {
-    //   if (err) {
-    //     return next(err)
-    //   }
-    //   req.flash("success", { msg: "Success! You are logged in." })
-    //   res.redirect(req.session.returnTo || "/dashboard")
-    // })
+    req.logIn(user, (err) => {
+      if (err) {
+        return next(err)
+      }
+      req.flash("success", { msg: "Success! You are logged in." })
+      // res.redirect(req.session.returnTo || "/dashboard")
+    })
     res.status(200).json({ msg: "authenticate success" })
   })(req, res, next)
 }
@@ -70,7 +70,7 @@ exports.getSignup = (req, res) => {
 }
 
 exports.postSignup = async (req, res, next) => {
-  const { userName, email, password } = req.body.data.user
+  let { userName, email, password } = req.body.data.user
   console.log(userName, email, password)
 
   // Input Validation
@@ -85,15 +85,13 @@ exports.postSignup = async (req, res, next) => {
     validationErrors.push({
       msg: "Password must be at least 8 characters long"
     })
-  if (!validator.equals(password, req.body.confirmPassword))
-    validationErrors.push({ msg: "Passwords do not match" })
+  // if (!validator.equals(password, req.body.confirmPassword))
+  //   validationErrors.push({ msg: "Passwords do not match" })
 
   if (validationErrors.length) {
     req.flash("errors", validationErrors)
-    return res.redirect("/login")
+    return res.send("validation length check")
   }
-
-  console.log(userName, email, password)
 
   try {
     // Email and userName sanitization
@@ -114,7 +112,10 @@ exports.postSignup = async (req, res, next) => {
         msg: "Account with that email address or username already exists."
       })
       // return res.redirect("../signup")
-      return res.status(200).json({ msg: "signup success" })
+      console.log("existing user")
+      return res.status(400).json({
+        msg: "Account with that email address or username already exists."
+      })
     } else {
       // Add new user to User collection
       const user = new User({
@@ -124,13 +125,13 @@ exports.postSignup = async (req, res, next) => {
       })
 
       await user.save()
-      res.status(200).json({ msg: "success" })
-      // req.logIn(user, (err) => {
-      //   if (err) {
-      //     return next(err)
-      //   }
-      //   res.redirect("/dashboard")
-      // })
+      req.logIn(user, (err) => {
+        if (err) {
+          return next(err)
+        }
+        // res.redirect("/dashboard")
+        res.status(200).json({ msg: "User can login to dashboard" })
+      })
     }
   } catch (err) {
     console.log(err)
