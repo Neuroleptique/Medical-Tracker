@@ -63,7 +63,7 @@ exports.getSignup = (req, res) => {
     return res.redirect("/dashboard")
   }
   res.render("signup", {
-    title: "Create Account"
+    title: "Create Accounts"
   })
 }
 
