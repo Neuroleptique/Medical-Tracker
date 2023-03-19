@@ -27,6 +27,7 @@ exports.postLogin = (req, res, next) => {
   email = validator.normalizeEmail(email, {
     gmail_remove_dots: false
   })
+  console.log("passport line :", email)
 
   passport.authenticate("local", (err, user, info) => {
     if (err) {
@@ -36,13 +37,14 @@ exports.postLogin = (req, res, next) => {
       req.flash("errors", info)
       return res.redirect("/login")
     }
-    req.logIn(user, (err) => {
-      if (err) {
-        return next(err)
-      }
-      req.flash("success", { msg: "Success! You are logged in." })
-      res.redirect(req.session.returnTo || "/dashboard")
-    })
+    // req.logIn(user, (err) => {
+    //   if (err) {
+    //     return next(err)
+    //   }
+    //   req.flash("success", { msg: "Success! You are logged in." })
+    //   res.redirect(req.session.returnTo || "/dashboard")
+    // })
+    res.status(200).json({ msg: "authenticate success" })
   })(req, res, next)
 }
 
@@ -91,6 +93,8 @@ exports.postSignup = async (req, res, next) => {
     return res.redirect("/login")
   }
 
+  console.log(userName, email, password)
+
   try {
     // Email and userName sanitization
     email = validator.normalizeEmail(email, {
@@ -109,7 +113,8 @@ exports.postSignup = async (req, res, next) => {
       req.flash("errors", {
         msg: "Account with that email address or username already exists."
       })
-      return res.redirect("../signup")
+      // return res.redirect("../signup")
+      return res.status(200).json({ msg: "signup success" })
     } else {
       // Add new user to User collection
       const user = new User({
@@ -120,12 +125,12 @@ exports.postSignup = async (req, res, next) => {
 
       await user.save()
       res.status(200).json({ msg: "success" })
-      req.logIn(user, (err) => {
-        if (err) {
-          return next(err)
-        }
-        res.redirect("/dashboard")
-      })
+      // req.logIn(user, (err) => {
+      //   if (err) {
+      //     return next(err)
+      //   }
+      //   res.redirect("/dashboard")
+      // })
     }
   } catch (err) {
     console.log(err)

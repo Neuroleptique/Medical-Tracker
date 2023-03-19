@@ -1,3 +1,4 @@
 config/config.env
 node_modules
 package.json
+.env
