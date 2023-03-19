@@ -1,6 +1,7 @@
 import React from "react"
-import SignupModal from "./SignupModal"
-import LoginModal from "./LoginModal"
+import SignupModal from "../components/SignupModal"
+import LoginModal from "../components/LoginModal"
+import { Link } from "react-router-dom"
 
 const Landing = () => {
   return (
@@ -12,6 +13,9 @@ const Landing = () => {
         Sign up
       </label>
       <button className="btn">Logout</button>
+      <button className="btn">
+        <Link to={"/calendar"}>Calendar</Link>
+      </button>
       <SignupModal />
       <LoginModal />
     </section>

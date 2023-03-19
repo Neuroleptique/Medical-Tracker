@@ -90,6 +90,7 @@ const apptsSlice = createSlice({
       })
       .addCase(signupData.fulfilled, (state, { payload }) => {
         state.loading = false
+        console.log(payload)
         state.register = payload
       })
       .addCase(signupData.rejected, (state, { payload }) => {

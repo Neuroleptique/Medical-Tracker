@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom"
 import DatePicker from "./components/DatePicker"
-import Landing from "./components/Landing"
+import Landing from "./pages/Landing"
 // import SignupRoute from "./components/testComponents/SignupRoute"
 
 function App() {

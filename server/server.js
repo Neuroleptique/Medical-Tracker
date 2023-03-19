@@ -8,6 +8,7 @@ const flash = require("express-flash")
 const logger = require("morgan")
 const connectDB = require("./config/database")
 const mainRoutes = require("./routes/main")
+const apptsRouter = require("./routes/appts")
 const cors = require("cors")
 
 // Use path to access directory for static site serving
@@ -32,6 +33,11 @@ app.use(express.static(path.resolve(__dirname, "../client/dist")))
 // Body Parsing
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+
+app.use(cors())
+
+//appts api route
+app.use("/api/v1/appts", apptsRouter)
 
 // Logging
 app.use(logger("dev"))

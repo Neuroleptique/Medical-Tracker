@@ -27,7 +27,6 @@ exports.postLogin = (req, res, next) => {
   email = validator.normalizeEmail(email, {
     gmail_remove_dots: false
   })
-  console.log("passport line :", email)
 
   passport.authenticate("local", (err, user, info) => {
     if (err) {
@@ -90,7 +89,7 @@ exports.postSignup = async (req, res, next) => {
 
   if (validationErrors.length) {
     req.flash("errors", validationErrors)
-    return res.send("validation length check")
+    return res.status(401).json({ msg: validationErrors })
   }
 
   try {
