@@ -15,7 +15,7 @@ const cors = require("cors")
 const path = require("path")
 
 // Use .env file in config folder
-require("dotenv").config({ path: "./config/config.env" })
+require("dotenv").config({ path: "./config/.env" })
 
 // Passport config
 require("./config/passport")(passport)

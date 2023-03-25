@@ -8,15 +8,14 @@ const createAppt = async (req, res) => {
     endDate,
     locationField: location
   } = req.body.data.appts
-  console.log("REQ BODY", req.body)
-  console.log(title, location)
+
   const appt = await Appt.create({
     title,
     startDate,
     endDate,
     locationField: location
   })
-  console.log("appt :", appt)
+
   res.send("success")
 }
 
