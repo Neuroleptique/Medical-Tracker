@@ -1,7 +1,6 @@
 import React from "react"
 import SignupModal from "../components/SignupModal"
 import LoginModal from "../components/LoginModal"
-import { Link } from "react-router-dom"
 
 const Landing = () => {
   return (
@@ -9,12 +8,13 @@ const Landing = () => {
       <label htmlFor="login-modal" className="btn">
         Login
       </label>
+
       <label htmlFor="signup-modal" className="btn">
         Sign up
       </label>
       <button className="btn">Logout</button>
       <button className="btn">
-        <Link to={"/calendar"}>Calendar</Link>
+        <a href="/calendar">Calendar</a>
       </button>
       <SignupModal />
       <LoginModal />

@@ -16,10 +16,9 @@ const SignupForm = () => {
 
   // handle form submit
   const onSubmit = (data) => {
-    console.log(data)
     dispatch(signupData(data))
   }
-  console.log(errors)
+
   useEffect(() => {
     if (formState.isSubmitSuccessful) {
       reset()

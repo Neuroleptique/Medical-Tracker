@@ -1,6 +1,5 @@
 import React from "react"
 import SignupForm from "./SignupForm"
-import SignupRoute from "../components/testComponents/SignupRoute"
 import signupLogo from "../assets/images/med1.png"
 
 const SignupModal = () => {

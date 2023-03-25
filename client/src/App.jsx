@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom"
-import DatePicker from "./components/DatePicker"
 import Landing from "./pages/Landing"
-// import SignupRoute from "./components/testComponents/SignupRoute"
+import Calendar from "./pages/Calendar"
 
 function App() {
   return (
@@ -10,8 +9,7 @@ function App() {
         <h1 className="text-center text-2xl">Appt Tracker</h1>
         <Routes>
           <Route path={"/"} element={<Landing />} />
-          <Route path={"/calendar"} element={<DatePicker />} />
-          {/* <Route path={"/signup"} element={<SignupRoute />} /> */}
+          <Route path={"/calendar"} element={<Calendar />} />
         </Routes>
       </div>
     </main>

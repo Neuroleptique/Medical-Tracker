@@ -13,22 +13,21 @@ const initialState = {
   appointmentChanges: {},
   editingAppointment: undefined,
   register: "",
-  hideRegister: ""
+  hideRegister: "",
+  todaysAppts: []
 }
 
 //Signup Fx
 export const signupData = createAsyncThunk(
   "signup/data",
-  async (signupData, thunkAPI) => {
+  async (userData, thunkAPI) => {
     // const { addedAppointment } = thunkAPI.getState().appts
     // params passing user input
 
-    console.log(signupData)
-
     try {
-      const resp = await axios.post(`http://localhost:5000/signup`, {
+      const resp = await axios.post(`${API_URL}signup`, {
         data: {
-          user: signupData
+          user: userData
         }
       })
       return resp.data
@@ -52,7 +51,6 @@ export const sendAppt = createAsyncThunk("send/appt", async (_, thunkAPI) => {
   }
 
   try {
-    console.log("API URL :", API_URL)
     const resp = await axios.post(`${API_URL}api/v1/appts/create`, config)
     return resp.data
   } catch (error) {
@@ -90,12 +88,10 @@ const apptsSlice = createSlice({
       })
       .addCase(signupData.fulfilled, (state, { payload }) => {
         state.loading = false
-        console.log(payload)
         state.register = payload
       })
       .addCase(signupData.rejected, (state, { payload }) => {
         state.loading = false
-        console.log(payload)
       })
   }
 })

@@ -12,10 +12,7 @@ const LoginForm = () => {
   } = useForm()
 
   // handle form submit
-  const onSubmit = (data) => {
-    console.log(data)
-  }
-  console.log(errors)
+  const onSubmit = (data) => {}
 
   useEffect(() => {
     if (formState.isSubmitSuccessful) {

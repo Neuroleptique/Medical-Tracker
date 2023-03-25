@@ -37,6 +37,7 @@ import { TextEditor, BasicLayout, DateEditor } from "../utils/formLayout"
 
 const DatePicker = () => {
   // grabs state from redux slice/state
+
   const {
     rawData,
     currentDate,
@@ -45,6 +46,7 @@ const DatePicker = () => {
     appointmentChanges,
     editingAppointment
   } = useSelector((store) => store.appts)
+
   const dispatch = useDispatch()
 
   const commitChanges = ({ added, changed, deleted }) => {

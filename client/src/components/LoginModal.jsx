@@ -1,13 +1,11 @@
 import React from "react"
 import LoginForm from "./LoginForm"
-import LoginPage from "../components/testComponents/LoginPage"
 import mediMateImg from "../assets/images/medimate2.png"
 
 const LoginModal = () => {
   return (
     <>
       <input type="checkbox" id="login-modal" className="modal-toggle" />
-
       <div className="modal">
         <div className="modal-box relative flex flex-col items-center justify-center border-2 border-black">
           <img src={mediMateImg} alt="medimate" className="" />
@@ -20,7 +18,6 @@ const LoginModal = () => {
           <div className="mx-16">
             <LoginForm />
           </div>
-          {/* <LoginPage /> */}
         </div>
       </div>
     </>

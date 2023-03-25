@@ -6,18 +6,25 @@ const createAppt = async (req, res) => {
     title,
     startDate,
     endDate,
-    locationField: location
+    locationField,
+    allDay,
+    prepField,
+    covidField
   } = req.body.data.appts
   console.log("REQ BODY", req.body)
-  console.log(title, location)
+  let covidData = covidField === 2 ? "yes" : "no"
+
   const appt = await Appt.create({
     title,
     startDate,
     endDate,
-    locationField: location
+    location: locationField,
+    allDay,
+    prepField,
+    covidData
   })
   console.log("appt :", appt)
-  res.send("success")
+  res.status(200).json({ appt })
 }
 
 module.exports = {

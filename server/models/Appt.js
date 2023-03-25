@@ -15,9 +15,18 @@ const apptSchema = new mongoose.Schema({
     type: Date,
     required: [true, "End date must be provided"]
   },
-  locationField: {
+  location: {
     type: String,
     required: [true, "Location must be provided"]
+  },
+  allDay: {
+    type: Boolean
+  },
+  prepField: {
+    type: String
+  },
+  covidData: {
+    type: String
   },
   createdAt: {
     type: Date,
