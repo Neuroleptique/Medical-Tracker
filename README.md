@@ -21,3 +21,10 @@
 - Added Appt model to server
 - Added route, controller to server
 - Reconfigured Signup logic in server to work with frontend
+
+#### March 25, 2023
+
+- Renamed variables in the createApptSlice to better identify what is being done
+- Fixed error when clicking Calendar link on Landing page
+- Removed testComponents folder from client side, wasn't needed
+- Added rest of appt fields on the Appt Schema
