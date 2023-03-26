@@ -69,7 +69,9 @@ exports.getSignup = (req, res) => {
 }
 
 exports.postSignup = async (req, res, next) => {
-  let { userName, email, password } = req.body.data.user
+  console.log(req)
+
+  let { userName, email, password } = req.body
   console.log(userName, email, password)
 
   // Input Validation
