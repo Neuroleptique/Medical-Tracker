@@ -25,7 +25,7 @@ exports.postLogin = (req, res, next) => {
     }
     if (!user) {
       req.flash("errors", info)
-      return res.status(200).json({ msg: "User can login" })
+      return res.status(401).json({ msg: "Invalid username or password" })
     }
     req.logIn(user, (err) => {
       if (err) {
