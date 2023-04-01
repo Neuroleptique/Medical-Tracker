@@ -26,4 +26,4 @@ Please delete options that are not relevant.
 - [ ] Any dependent changes have been merged and published in downstream modules
 
 # Reviwer
-Please add indifferentghost or another member as the reviewer of your PR
+Please add timmyichen and at least 2 other members as the reviewer of your PR
