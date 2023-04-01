@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .gunmetal {
+    @apply bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600;
+  }
+}
