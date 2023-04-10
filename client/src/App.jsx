@@ -11,9 +11,9 @@ function App() {
     <>
 
       <Router>
-        <div className="flex justify-center items-center py-8">
+        {/* <div className="flex justify-center items-center py-8">
           <Header />
-        </div>
+        </div> */}
 
         <div className='container'>
           <Routes>
