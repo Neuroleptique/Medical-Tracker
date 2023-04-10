@@ -59,17 +59,18 @@ function Login() {
   return (
     <>
       <div className="form h-screen flex bg-white justify-center items-center">
-        <div className="w-7/12 h-4/6 border-2 flex justify-center items-center h-70 border-black">
+        <div className="w-auto md:w-7/12 h-auto py-6 md:h-4/6 border-2 flex flex-col md:flex-row justify-center items-center h-70 border-black">
           <div className="w-6/12 flex flex-col items-center text-center">
             <span className="logo-section ">
-              <img className="w-11/12 mb-6 " src={logoImage} alt="Logo Image" />
+              <img className="w-11/12 
+               pb-4 md:mb-6 " src={logoImage} alt="Logo Image" />
             </span>
-            <span className="text-black w-10/12">
+            <span className="text-black w-10/12 hidden md:block">
               A web application that helps users keep track of their medical
               appointments and prescriptions.
             </span>
           </div>
-          <div className="w-2/5 bg-neutral-100 h-4/5 p-3 card mr-5 leading-loose px-6">
+          <div className="w-4/5 md:w-2/5 bg-neutral-100 md:h-4/5 p-3 card md:mr-5 leading-loose px-6">
             <div className="login-header-section py-2">
               <h1 className="text-4xl text-center font-semi-bold">Log In</h1>
               <span>
@@ -97,7 +98,7 @@ function Login() {
                 </label>
                 <input
                   type="password"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input input-bordered w-full max-w-xzzzzs"
                   id="password"
                   name="password"
                   value={password}
