@@ -68,7 +68,7 @@ function Register() {
 
   return (
     
-      <div className=' border-2 border-white flex justify-center align-center my-[80px] mx-[50px] w-[1280px] h-[600px] max-sm:relative max-sm:top-[50px] max-sm:border-none max-sm:w-auto max-sm:flex-col max-sm:h-auto max-sm:justify-center max-sm:mx-3 max-sm:my-2 max-sm:p-2'>
+      <div className=' border-2 border-black flex justify-center align-center my-[80px] mx-[50px] w-[1280px] h-[600px] max-sm:relative max-sm:top-[50px] max-sm:border-none max-sm:w-auto max-sm:flex-col max-sm:h-auto max-sm:justify-center max-sm:mx-3 max-sm:my-2 max-sm:p-2'>
         <div  >
           <img src={logo} alt='logo' className='hidden max-sm:block' />
           <img src={images} alt="Photo" className=' mr-[60px] w-[470px] h-[509px] mt-[46px] mb-[45px]  block object-fill max-sm:hidden' />
@@ -76,7 +76,7 @@ function Register() {
 
 
       
-      <div className="signup-container flex justify-center ml-[42px] mt-[80px] mb-[46px] relative w-[388px] h-[409px] max-sm:p-3 max-sm:m-1">
+      <div className="signup-container bg-[#FBFAFA] flex justify-center ml-[42px] mt-[80px] mb-[46px] relative w-[388px] h-[409px] max-sm:p-3 max-sm:m-1">
       <div>
         {/* <h1>
           <TfiWrite /> Sign up
@@ -85,20 +85,20 @@ function Register() {
       </div>
 
       <section className="form font-Sans space-y-6 ">
-      <p className=" mb-4 text-xl font-medium  text-gray-900 dark:text-white">Sign Up</p>
+      <p className=" mb-4 text-xl font-medium  text-gray-900 dark:text-black">Sign Up</p>
         <form onSubmit={onSubmit}>
           <div className="form-group">
-          <label for="email" className="block mt-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+          <label for="email" className="block mt-2 text-sm font-medium dark:text-black">Name</label>
             <input
               type="text"
-              className="form-control  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-[12px] focus:ring-blue-500 focus:border-blue-500 block w-[216px] h-[35px] p-3 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" 
+              className="form-control  bg-[#EAE7E7] border border-gray-300 text-gray-900 text-sm rounded-[12px] focus:ring-black-500 focus:border-black-500 block w-[216px] h-[35px] p-3 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" 
               id="name" name="userName"
               value={userName}
               placeholder="Enter your name here"
               onChange={onChange} />
           </div>
           <div className="form-group">
-          <label for="email" class="block mt-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+          <label for="email" class="block mt-2 text-sm font-medium text-gray-900 dark:text-black">Email</label>
             <input
               type="email"
               className="form-control bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-[12px] focus:ring-blue-500 focus:border-blue-500 block w-[216px] h-[35px] p-3 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
@@ -109,7 +109,7 @@ function Register() {
               onChange={onChange} />
           </div>
           <div className="form-group">
-          <label for="email" class="block mt-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+          <label for="email" class="block mt-2 text-sm font-medium text-gray-900 dark:text-black">Password</label>
             <input
               type="password"
               className="form-control bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-[12px] focus:ring-blue-500 focus:border-blue-500 block w-[216px] h-[35px] p-3 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
@@ -119,17 +119,17 @@ function Register() {
               onChange={onChange} />
           </div>
           <div className="form-group">
-          <label for="email" class="block mt-2 text-sm font-medium text-gray-900 dark:text-white">Confirm Password</label>
+          <label for="email" class="block mt-2 text-sm font-medium text-gray-900 dark:text-black">Confirm Password</label>
             <input
               type="password"
-              className="form-control bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-[12px] focus:ring-blue-500 focus:border-blue-500 block w-[216px] h-[35px] p-3 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" 
+              className="form-control bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-[12px] block w-[216px] h-[35px] p-3 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" 
               id="password2" name="password2"
               value={password2}
               placeholder="Confirm password here"
               onChange={onChange} />
           </div>
           <div className="form-group">
-            <button type="submit" className='btn mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-[8px] text-sm p-3 w-[216px] h-[45px] text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'>Create Account</button>
+            <button type="submit" className='btn mt-4 text-white bg-[#2A364E] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-[8px] text-sm p-3 w-[216px] h-[45px] text-center'>Create Account</button>
           </div>
         </form>
 
