@@ -6,6 +6,7 @@ import {TfiWrite} from 'react-icons/tfi'
 import {register, reset} from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
 import images from '../images/med-1.png'
+import logo from '../images/medimate 3.png'
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -66,15 +67,16 @@ function Register() {
   }
 
   return (
-    // <div className='bg-blue-600 flex justify-center'>
-      <div className=' border-2 border-white flex justify-center align-center mt-[80px] ml-[107px] w-[1280px] h-[600px]'>
+    
+      <div className=' border-2 border-white flex justify-center align-center my-[80px] mx-[50px] w-[1280px] h-[600px] max-sm:border-none max-sm:w-full max-sm:flex-col max-sm:mx-1'>
         <div  >
-          <img src={images} alt="Photo" className=' mr-[60px] w-[470px] h-[509px] mt-[46px] mb-[45px]  block object-fill' />
+          <img src={logo} alt='logo' className='hidden max-sm:block' />
+          <img src={images} alt="Photo" className=' mr-[60px] w-[470px] h-[509px] mt-[46px] mb-[45px]  block object-fill max-sm:hidden' />
         </div>
 
 
       
-      <div className="signup-container flex justify-center ml-[42px] mt-[80px] mb-[46px] relative w-[388px] h-[409px]">
+      <div className="signup-container flex justify-center ml-[42px] mt-[80px] mb-[46px] relative w-[388px] h-[409px] max-sm:p-3 max-sm:m-1">
       <div>
         {/* <h1>
           <TfiWrite /> Sign up
@@ -82,7 +84,7 @@ function Register() {
         
       </div>
 
-      <section className="form font-Sans space-y-6">
+      <section className="form font-Sans space-y-6 ">
       <p className=" mb-4 text-xl font-medium  text-gray-900 dark:text-white">Sign Up</p>
         <form onSubmit={onSubmit}>
           <div className="form-group">
@@ -134,7 +136,7 @@ function Register() {
       </section>
       </div>
       </div>
-    // </div>
+    
    
   )
 }
