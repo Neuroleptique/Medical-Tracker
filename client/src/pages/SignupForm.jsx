@@ -68,7 +68,7 @@ function Register() {
 
   return (
     
-      <div className=' border-2 border-white flex justify-center align-center my-[80px] mx-[50px] w-[1280px] h-[600px] max-sm:border-none max-sm:w-full max-sm:flex-col max-sm:mx-1'>
+      <div className=' border-2 border-white flex justify-center align-center my-[80px] mx-[50px] w-[1280px] h-[600px] max-sm:relative max-sm:top-[50px] max-sm:border-none max-sm:w-auto max-sm:flex-col max-sm:h-auto max-sm:justify-center max-sm:mx-3 max-sm:my-2 max-sm:p-2'>
         <div  >
           <img src={logo} alt='logo' className='hidden max-sm:block' />
           <img src={images} alt="Photo" className=' mr-[60px] w-[470px] h-[509px] mt-[46px] mb-[45px]  block object-fill max-sm:hidden' />
