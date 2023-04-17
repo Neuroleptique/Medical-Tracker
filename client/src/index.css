@@ -7,15 +7,4 @@
     @apply bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600;
   }
 }
-/* Sign up  */
 
-.form > p{
-  /* font-family: 'Times New Roman', Times, serif; */
-  position:relative;
-  top:30px;
-  text-align: center;
-  font-weight: 600;
-  font-size: 30px;
-  margin-bottom: 50px;
-  letter-spacing: 3px;
-}

@@ -84,8 +84,8 @@ function Register() {
         
       </div>
 
-      <section className="form font-Sans space-y-6 ">
-      <p className=" mb-4 text-xl font-medium  text-gray-900 dark:text-black">Sign Up</p>
+      <section className="form  font-Sans space-y-6 ">
+      <p className="relative top-[30px] text-[35px] text-center mb-[50px]  tracking-widest font-semibold  text-gray-900 dark:text-black">Sign Up</p>
         <form onSubmit={onSubmit}>
           <div className="form-group">
           <label for="email" className="block mt-2 text-sm font-medium dark:text-black">Name</label>
